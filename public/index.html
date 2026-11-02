@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Convert images, text and Office documents to PDF with PDFMaster. Fast, simple and secure." />
+  <title>PDFMaster — Everything to PDF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.9.0/mammoth.browser.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="PDFMaster home"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.8h8l4.5 4.5v13.9H6z"/><path d="M14 2.8v4.7h4.5M8.5 13h7M8.5 16.5h7"/></svg></span><span>PDF<span class="brand-accent">Master</span></span></a>
+    <nav class="nav-links"><a href="#tools">All tools</a><a href="#how">How it works</a><a href="#privacy">Privacy</a></nav>
+    <a class="header-cta" href="#tools">Start converting <span>↗</span></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+  </header>
+1
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR EVERYDAY PDF TOOLKIT</div>
+        <h1>Everything to PDF.<br><span>Made effortless.</span></h1>
+        <p class="hero-lead">Turn images, text and documents into polished PDFs in just a few clicks. No complicated software. No fuss.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#tools">Explore PDF tools <span>→</span></a><div class="trust-note"><span class="trust-icon">✓</span> Simple, fast &amp; secure</div></div>
+        <div class="hero-stats"><div><strong>7+</strong><span>conversion tools</span></div><i></i><div><strong>Free</strong><span>to get started</span></div><i></i><div><strong>Easy</strong><span>for everyone</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="PDF file illustration">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="floating-chip chip-image"><span class="mini-icon image-mini">▧</span> Images</div>
+        <div class="floating-chip chip-word"><span class="mini-icon word-mini">W</span> Word</div>
+        <div class="floating-chip chip-sheet"><span class="mini-icon sheet-mini">▦</span> Excel</div>
+        <div class="pdf-sheet"><div class="pdf-fold"></div><div class="pdf-symbol">PDF</div><div class="pdf-lines"><b></b><b></b><b></b><b></b></div><div class="pdf-bottom"><span>PDFMaster</span><span>01</span></div></div>
+        <div class="sparkle sparkle-a">✦</div><div class="sparkle sparkle-b">✧</div><div class="convert-arrow">↘</div>
+      </div>
+    </section>
+
+    <section class="tools-section" id="tools">
+      <div class="wrap">
+        <div class="section-heading"><div><div class="eyebrow">THE TOOLBOX</div><h2>What would you like to convert?</h2><p>Choose a tool and get your PDF ready in moments.</p></div><div class="tool-count"><span class="count-dot"></span> 7 tools available</div></div>
+        <div class="tool-grid">
+          <button class="tool-card" data-tool="image"><span class="tool-icon icon-image">▧</span><span class="tool-label">Image to PDF</span><span class="tool-desc">JPG, PNG, WEBP and more</span><span class="tool-arrow">↗</span></button>
+          <button class="tool-card" data-tool="text"><span class="tool-icon icon-text">T</span><span class="tool-label">Text to PDF</span><span class="tool-desc">Turn your notes into a PDF</span><span class="tool-arrow">↗</span></button>
+          <button class="tool-card" data-tool="word"><span class="tool-icon icon-word">W</span><span class="tool-label">Word to PDF</span><span class="tool-desc">DOC and DOCX documents</span><span class="tool-arrow">↗</span></button>
+          <button class="tool-card" data-tool="images"><span class="tool-icon icon-images">▧</span><span class="tool-label">Multiple images to PDF</span><span class="tool-desc">Combine images in one file</span><span class="tool-arrow">↗</span></button>
+          <button class="tool-card" data-tool="excel"><span class="tool-icon icon-excel">▦</span><span class="tool-label">Excel to PDF</span><span class="tool-desc">XLS and XLSX spreadsheets</span><span class="tool-arrow">↗</span></button>
+          <button class="tool-card" data-tool="powerpoint"><span class="tool-icon icon-ppt">P</span><span class="tool-label">PowerPoint to PDF</span><span class="tool-desc">PPT and PPTX presentations</span><span class="tool-arrow">↗</span></button>
+          <button class="tool-card preview-card" data-tool="preview"><span class="tool-icon icon-preview">◫</span><span class="tool-label">PDF preview</span><span class="tool-desc">Open and preview a PDF file</span><span class="tool-arrow">↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace-section" id="workspace">
+      <div class="wrap">
+        <div class="workspace-card">
+          <div class="workspace-head"><div><div class="eyebrow">YOUR WORKSPACE</div><h2 id="workspaceTitle">Ready when you are.</h2><p id="workspaceSubtitle">Select a tool above to start converting your files.</p></div><span class="secure-pill"><span>●</span> Private workspace</span></div>
+          <div class="workspace-body" id="workspaceBody">
+            <div class="empty-state"><div class="empty-graphic"><div class="empty-file">PDF</div><span>↗</span></div><h3>Your next PDF starts here</h3><p>Pick any conversion tool above. Your file will be processed with care.</p><a href="#tools" class="text-link">Browse all tools <span>→</span></a></div>
+          </div>
+          <div class="workspace-foot"><span><span class="foot-check">✓</span> Files are processed for conversion only</span><span>Maximum file size: 25 MB</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section wrap" id="how"><div class="section-heading centered"><div><div class="eyebrow">THREE SIMPLE STEPS</div><h2>PDFs without the hassle.</h2><p>From file to finished PDF, the process is refreshingly simple.</p></div></div><div class="steps"><article><span class="step-number">01</span><div class="step-icon">↑</div><h3>Choose your file</h3><p>Upload an image or document, or type your text directly.</p></article><article><span class="step-number">02</span><div class="step-icon">✧</div><h3>Convert to PDF</h3><p>PDFMaster takes care of the conversion for you.</p></article><article><span class="step-number">03</span><div class="step-icon">↓</div><h3>Preview &amp; download</h3><p>Check your PDF, then save it to your device.</p></article></div></section>
+
+    <section class="privacy-section" id="privacy"><div class="wrap privacy-inner"><div class="privacy-icon">♧</div><div><div class="eyebrow">YOUR FILES, YOUR BUSINESS</div><h2>Privacy comes standard.</h2><p>Image and text conversions happen in your browser. Office files are sent to your own PDFMaster server for conversion and removed from its temporary workspace afterwards. Avoid uploading sensitive files to public deployments unless you've reviewed your hosting and security setup.</p></div><a href="#tools" class="secondary-btn">Convert a file <span>→</span></a></div></section>
+  </main>
+
+  <footer class="footer wrap"><a class="brand" href="#home"><span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M6 2.8h8l4.5 4.5v13.9H6z"/><path d="M14 2.8v4.7h4.5M8.5 13h7M8.5 16.5h7"/></svg></span><span>PDF<span class="brand-accent">Master</span></span></a><span>© <span id="year"></span> PDFMaster. Made to make PDFs easier.</span><a href="#home">Back to top ↑</a></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
